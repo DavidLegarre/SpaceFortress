@@ -11,7 +11,7 @@ private:
 public:
     Galaxy(const std::string& name, int numStars);
 
-    void printDetails() const override;
+    void printDetails() override;
 };
 
 #endif // GALAXY_H

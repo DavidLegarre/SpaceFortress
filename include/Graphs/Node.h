@@ -10,8 +10,8 @@ class Node {
       Node(const std::string& name);
       virtual ~Node();
 
-      const std::string& getName() const;
-      virtual void printDetails() const = 0;
+      const std::string& getName();
+      virtual void printDetails() = 0;
 };
 
 #endif
