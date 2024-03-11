@@ -4,8 +4,8 @@
 #include "Graphs/AstralBody/Galaxy.h"
 
 int main() {
-    GalaxyMap galaxy;
-    galaxy.printMap();
+    GalaxyMap galaxyMap;
+    galaxyMap.printMap();
     Galaxy galaxyTest = Galaxy("Andromeda", 4);
     galaxyTest.printDetails();
     return 0;
