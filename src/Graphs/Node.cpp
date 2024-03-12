@@ -7,3 +7,7 @@ Node::~Node() {}
 const std::string& Node::getName() {
     return name;
 }
+
+void Node::addChild(Node* node) {
+    nodes.push_back(node);
+}

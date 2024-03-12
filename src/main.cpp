@@ -8,5 +8,7 @@ int main() {
     galaxyMap.printMap();
     Galaxy galaxyTest = Galaxy("Andromeda", 4);
     galaxyTest.printDetails();
+    Galaxy galaxyTestChild = Galaxy("Star", 45);
+    //galaxyTest.addChild(galaxyTestChild);
     return 0;
 }
