@@ -1,5 +1,4 @@
-#ifndef GALAXY_H
-#define GALAXY_H
+#pragma once
 
 #include "Graphs/AstralBody/AstralBody.hpp"
 #include "Utils/Coordinate.hpp"
@@ -15,5 +14,3 @@ class Galaxy : public AstralBody {
 
   void printDetails() override;
 };
-
-#endif  // GALAXY_H

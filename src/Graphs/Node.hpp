@@ -1,5 +1,4 @@
-#ifndef GRAPHS_NODE_H
-#define GRAPHS_NODE_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -18,4 +17,3 @@ class Node {
       void printChildren();
 };
 
-#endif

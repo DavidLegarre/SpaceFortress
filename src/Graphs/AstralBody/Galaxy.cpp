@@ -1,4 +1,4 @@
-#include "Graphs/AstralBody/Galaxy.hpp"
+#include "./Galaxy.hpp"
 
 #include <iostream>
 

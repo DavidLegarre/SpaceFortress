@@ -1,6 +1,4 @@
-#ifndef COORDINATE_H
-#define COORDINATE_H
-
+#pragma once
 class Coordinate {
  private:
   int positionX;
@@ -12,5 +10,3 @@ class Coordinate {
   int getX() { return positionX; }
   int getY() { return positionY; }
 };
-
-#endif  // COORDINATE_H

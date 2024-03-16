@@ -1,6 +1,4 @@
-#ifndef ASTRALBODY_H
-#define ASTRALBODY_H
-
+#pragma once
 #include <string>
 
 #include "Graphs/Node.hpp"
@@ -17,5 +15,3 @@ class AstralBody : public Node {
   int getX() { return coordinates.getX(); }
   int getY() { return coordinates.getY(); }
 };
-
-#endif

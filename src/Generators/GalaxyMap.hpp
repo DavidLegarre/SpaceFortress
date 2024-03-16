@@ -1,5 +1,4 @@
-#ifndef GENERATORS_GALAXYMAP_H
-#define GENERATORS_GALAXYMAP_H
+#pragma once 
 
 #include <vector>
 
@@ -20,4 +19,3 @@ class GalaxyMap {
   void deleteBody(AstralBody& astralBody);
 };
 
-#endif  // GENERATORS_GALAXYMAP_H
