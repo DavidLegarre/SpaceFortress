@@ -1,9 +1,9 @@
-#include "Graphs/AstralBody/Galaxy.h"
+#include "Graphs/AstralBody/Galaxy.hpp"
 
 #include <iostream>
 
-#include "Graphs/AstralBody/AstralBody.h"
-#include "Utils/Coordinate.h"
+#include "Graphs/AstralBody/AstralBody.hpp"
+#include "Utils/Coordinate.hpp"
 
 Galaxy::Galaxy(const std::string& name, const Coordinate& coordinates,
                const int& numStars)

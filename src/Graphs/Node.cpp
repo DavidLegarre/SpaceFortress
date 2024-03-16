@@ -1,4 +1,4 @@
-#include "Graphs/Node.h"
+#include "Graphs/Node.hpp"
 
 Node::Node(const std::string &name) : name(name) {}
 

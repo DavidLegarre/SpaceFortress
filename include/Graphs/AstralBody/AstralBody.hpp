@@ -3,8 +3,8 @@
 
 #include <string>
 
-#include "Graphs/Node.h"
-#include "Utils/Coordinate.h"
+#include "Graphs/Node.hpp"
+#include "Utils/Coordinate.hpp"
 
 class AstralBody : public Node {
  private:

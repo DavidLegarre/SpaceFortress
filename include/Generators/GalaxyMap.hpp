@@ -3,7 +3,7 @@
 
 #include <vector>
 
-#include "Graphs/AstralBody/AstralBody.h"
+#include "Graphs/AstralBody/AstralBody.hpp"
 
 class GalaxyMap {
  private:

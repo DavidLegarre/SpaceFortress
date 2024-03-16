@@ -1,4 +1,4 @@
-#include "Generators/GalaxyMap.h"
+#include "Generators/GalaxyMap.hpp"
 
 #include <algorithm>
 #include <cstdlib>

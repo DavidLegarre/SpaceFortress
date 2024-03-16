@@ -1,8 +1,8 @@
 #ifndef GALAXY_H
 #define GALAXY_H
 
-#include "Graphs/AstralBody/AstralBody.h"
-#include "Utils/Coordinate.h"
+#include "Graphs/AstralBody/AstralBody.hpp"
+#include "Utils/Coordinate.hpp"
 
 class Galaxy : public AstralBody {
  private:
