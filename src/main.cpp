@@ -1,3 +1,4 @@
+#include <SFML/Window.hpp>
 #include <iostream>
 
 #include "Generators/GalaxyMap.hpp"
@@ -5,19 +6,18 @@
 #include "Utils/Coordinate.hpp"
 
 int main() {
-  GalaxyMap galaxyMap;
+  sf::Window window(sf::VideoMode(800, 600), "My window");
 
-  Coordinate positionTest = Coordinate(1, 2);
-  Galaxy galaxyTest = Galaxy("Andromeda", positionTest, 4);
-  Coordinate positionTestChild = Coordinate(9, 4);
-  Galaxy galaxyTestChild = Galaxy("Milky Way", positionTestChild, 45);
-  galaxyTest.addChild(&galaxyTestChild);
-
-  galaxyMap.addBody(galaxyTest);
-  galaxyMap.addBody(galaxyTestChild);
-
-  galaxyMap.printMap();
-  galaxyTest.printChildren();
+  // run the program as long as the window is open
+  while (window.isOpen()) {
+    // check all the window's events that were triggered since the last
+    // iteration of the loop
+    sf::Event event;
+    while (window.pollEvent(event)) {
+      // "close requested" event: we close the window
+      if (event.type == sf::Event::Closed) window.close();
+    }
+  }
 
   return 0;
 }
