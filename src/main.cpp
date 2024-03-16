@@ -1,8 +1,8 @@
 #include <iostream>
 
-#include "Generators/GalaxyMap.h"
-#include "Graphs/AstralBody/Galaxy.h"
-#include "Utils/Coordinate.h"
+#include "Generators/GalaxyMap.hpp"
+#include "Graphs/AstralBody/Galaxy.hpp"
+#include "Utils/Coordinate.hpp"
 
 int main() {
   GalaxyMap galaxyMap;
