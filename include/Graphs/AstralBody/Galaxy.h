@@ -1,17 +1,19 @@
 #ifndef GALAXY_H
 #define GALAXY_H
 
-#include "Graphs/Node.h"
+#include "Graphs/AstralBody/AstralBody.h"
+#include "Utils/Coordinate.h"
 
-// Derived class representing a galaxy
-class Galaxy : public Node {
-private:
-    int numStars;
+class Galaxy : public AstralBody {
+ private:
+  int numStars;
+  Coordinate coordinates;
 
-public:
-    Galaxy(const std::string& name, int numStars);
+ public:
+  Galaxy(const std::string& name, const Coordinate& coordinates,
+         const int& numStars);
 
-    void printDetails() override;
+  void printDetails() override;
 };
 
-#endif // GALAXY_H
+#endif  // GALAXY_H

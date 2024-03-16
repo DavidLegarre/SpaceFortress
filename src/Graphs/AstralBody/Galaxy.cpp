@@ -1,9 +1,17 @@
 #include "Graphs/AstralBody/Galaxy.h"
+
 #include <iostream>
 
-Galaxy::Galaxy(const std::string& name, int numStars)
- : Node(name), numStars(numStars) {}
+#include "Graphs/AstralBody/AstralBody.h"
+#include "Utils/Coordinate.h"
+
+Galaxy::Galaxy(const std::string& name, const Coordinate& coordinates,
+               const int& numStars)
+    : AstralBody(name, coordinates),
+      numStars(numStars),
+      coordinates(coordinates) {}
 
 void Galaxy::printDetails() {
-    std::cout << "Galaxy: " << name << ", Number of stars: " << numStars << std::endl;
+  std::cout << "Galaxy: " << name << ", Number of stars: " << numStars
+            << std::endl;
 }
