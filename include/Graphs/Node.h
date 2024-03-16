@@ -15,6 +15,7 @@ class Node {
       const std::string& getName();
       virtual void printDetails() = 0;
       virtual void addChild(Node* child);
+      void printChildren();
 };
 
 #endif

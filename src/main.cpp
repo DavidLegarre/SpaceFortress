@@ -4,11 +4,14 @@
 #include "Graphs/AstralBody/Galaxy.h"
 
 int main() {
-    GalaxyMap galaxyMap;
-    galaxyMap.printMap();
-    Galaxy galaxyTest = Galaxy("Andromeda", 4);
-    galaxyTest.printDetails();
-    Galaxy galaxyTestChild = Galaxy("Star", 45);
-    //galaxyTest.addChild(galaxyTestChild);
-    return 0;
+
+  GalaxyMap galaxyMap;
+  galaxyMap.printMap();
+
+  Galaxy galaxyTest = Galaxy("Andromeda", 4);
+  Galaxy galaxyTestChild = Galaxy("Milky Way", 45);
+  galaxyTest.addChild(&galaxyTestChild);
+  galaxyTest.printChildren();
+
+  return 0;
 }
