@@ -1,5 +1,6 @@
 #include "./GalaxyMap.hpp"
 
+#include <SFML/Graphics.hpp>
 #include <algorithm>
 #include <cstdlib>
 #include <iostream>
@@ -16,7 +17,6 @@ GalaxyMap::GalaxyMap() {
 }
 
 void GalaxyMap::printMap() {
-  populateMap();
   // Clear screen after printing Map
   cls();
   // Implementation of printMap function
@@ -28,12 +28,19 @@ void GalaxyMap::printMap() {
   }
 }
 
+void GalaxyMap::addBody(AstralBody& astralBody) {
+  Bodies.push_back(&astralBody);
+
+  populateMap();
+}
+
 void GalaxyMap::deleteBody(AstralBody& astralBody) {
   auto element = std::find(Bodies.begin(), Bodies.end(), &astralBody);
 
   if (element != Bodies.end()) {
     Bodies.erase(element);
   }
+  populateMap();
 }
 
 void GalaxyMap::populateMap() {
@@ -42,5 +49,16 @@ void GalaxyMap::populateMap() {
     int y = body->getY();
 
     map[y][x] = '*';
+  }
+}
+
+void GalaxyMap::renderMap(sf::RenderWindow& window) {
+  // Render nodes (astral bodies)
+  for (const auto& body : Bodies) {
+    sf::CircleShape nodeShape(10);
+    nodeShape.setFillColor(sf::Color::White);
+    nodeShape.setPosition(body->getX(), body->getY());
+
+    window.draw(nodeShape);
   }
 }

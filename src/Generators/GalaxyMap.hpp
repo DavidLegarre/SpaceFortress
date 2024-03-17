@@ -1,5 +1,6 @@
-#pragma once 
+#pragma once
 
+#include <SFML/Graphics.hpp>
 #include <vector>
 
 #include "Graphs/AstralBody/AstralBody.hpp"
@@ -15,7 +16,7 @@ class GalaxyMap {
  public:
   GalaxyMap();
   void printMap();
-  void addBody(AstralBody& astralBody) { Bodies.push_back(&astralBody); }
+  void addBody(AstralBody& astralBody);
   void deleteBody(AstralBody& astralBody);
+  void renderMap(sf::RenderWindow& window);
 };
-
