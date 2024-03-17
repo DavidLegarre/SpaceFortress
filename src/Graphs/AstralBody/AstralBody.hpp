@@ -5,7 +5,7 @@
 #include "Utils/Coordinate.hpp"
 
 class AstralBody : public Node {
- private:
+ protected:
   Coordinate coordinates;
 
  public:

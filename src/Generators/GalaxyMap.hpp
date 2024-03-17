@@ -16,7 +16,10 @@ class GalaxyMap {
  public:
   GalaxyMap();
   void printMap();
+
+  const std::vector<AstralBody *> &getBodies() const { return Bodies; }
   void addBody(AstralBody &astralBody);
   void deleteBody(AstralBody &astralBody);
+
   void renderMap(sf::RenderWindow &window);
 };

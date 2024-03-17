@@ -8,17 +8,17 @@
 GalaxyMap initUniverse() {
   GalaxyMap galaxyMap;
 
+  size_t initialSize = galaxyMap.getBodies().size();
+
   Coordinate positionTest = Coordinate(1, 2);
   Galaxy galaxyTest = Galaxy("Andromeda", positionTest, 4);
-  Coordinate positionTestChild = Coordinate(9, 4);
-  Galaxy galaxyTestChild = Galaxy("Milky Way", positionTestChild, 45);
-  galaxyTest.addChild(&galaxyTestChild);
-
-  std::printf("Galaxy %s has Position X %d\n", galaxyTest.getName().c_str(),
-              galaxyTest.getX());
+  galaxyTest.printDetails();
 
   galaxyMap.addBody(galaxyTest);
-  // galaxyMap.addBody(galaxyTestChild);
+  // Get the size of the Bodies vector after adding the object
+  size_t finalSize = galaxyMap.getBodies().size();
+
+  std::printf("Initsize: %ld, finalsize: %ld\n", initialSize, finalSize);
 
   return galaxyMap;
 }
@@ -39,13 +39,9 @@ void renderWindow(sf::RenderWindow& window, GalaxyMap& galaxyMap) {
 }
 
 int main() {
-  sf::RenderWindow window(sf::VideoMode(400,360), "My window");
+  sf::RenderWindow window(sf::VideoMode(400, 360), "SpaceFortress");
   GalaxyMap galaxyMap = initUniverse();
 
-  window.setTitle("SpaceFortress");
-  Coordinate positionTest = Coordinate(1, 2);
-  Galaxy galaxyTest = Galaxy("Andromeda", positionTest, 4);
-  std::printf("Galaxy Test position X %d\n", galaxyTest.getX());
   renderWindow(window, galaxyMap);
 
   return 0;

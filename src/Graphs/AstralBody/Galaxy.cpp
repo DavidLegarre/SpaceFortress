@@ -10,6 +10,9 @@ Galaxy::Galaxy(const std::string& name, Coordinate& coordinates,
     : AstralBody(name, coordinates), numStars(numStars) {}
 
 void Galaxy::printDetails() {
-  std::cout << "Galaxy: " << name << ", Number of stars: " << numStars
-            << std::endl;
+  int posX = coordinates.getPositionX();
+  int posY = coordinates.getPositionY();
+  std::cout << "Name: " << name << "\n";
+  std::cout << "Number of stars: " << numStars << "\n";
+  std::cout << "Position: X: " << posX << " Y: " << posY << "\n";
 }

@@ -1,7 +1,7 @@
 # Compiler
 CXX := g++
 # Compiler flags
-CXXFLAGS := -std=c++20 -Wall -Wextra -Iinclude
+CXXFLAGS := -std=c++20 -Wall -Werror -Wpedantic -Wextra -Iinclude
 
 TARGET_EXEC := SpaceFortress
 
