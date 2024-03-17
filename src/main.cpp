@@ -8,17 +8,9 @@
 GalaxyMap initUniverse() {
   GalaxyMap galaxyMap;
 
-  size_t initialSize = galaxyMap.getBodies().size();
-
   Coordinate positionTest = Coordinate(1, 2);
-  Galaxy galaxyTest = Galaxy("Andromeda", positionTest, 4);
-  galaxyTest.printDetails();
-
-  galaxyMap.addBody(galaxyTest);
-  // Get the size of the Bodies vector after adding the object
-  size_t finalSize = galaxyMap.getBodies().size();
-
-  std::printf("Initsize: %ld, finalsize: %ld\n", initialSize, finalSize);
+  Galaxy* galaxyTest = new Galaxy("Andromeda", positionTest, 4);
+  galaxyMap.addBody(*galaxyTest);
 
   return galaxyMap;
 }
