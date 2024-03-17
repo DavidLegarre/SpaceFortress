@@ -8,7 +8,7 @@ class Galaxy : public AstralBody {
   int numStars;
 
  public:
-  Galaxy(const std::string& name, const Coordinate& coordinates,
+  Galaxy(const std::string& name, Coordinate& coordinates,
          const int& numStars);
 
   void printDetails() override;

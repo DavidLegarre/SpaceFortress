@@ -5,7 +5,7 @@
 #include "Graphs/AstralBody/AstralBody.hpp"
 #include "Utils/Coordinate.hpp"
 
-Galaxy::Galaxy(const std::string& name, const Coordinate& coordinates,
+Galaxy::Galaxy(const std::string& name, Coordinate& coordinates,
                const int& numStars)
     : AstralBody(name, coordinates), numStars(numStars) {}
 

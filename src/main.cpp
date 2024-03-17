@@ -39,14 +39,14 @@ void renderWindow(sf::RenderWindow& window, GalaxyMap& galaxyMap) {
 }
 
 int main() {
-  sf::RenderWindow window(sf::VideoMode(1920, 1080), "My window");
+  sf::RenderWindow window(sf::VideoMode(400,360), "My window");
   GalaxyMap galaxyMap = initUniverse();
 
   window.setTitle("SpaceFortress");
   Coordinate positionTest = Coordinate(1, 2);
   Galaxy galaxyTest = Galaxy("Andromeda", positionTest, 4);
   std::printf("Galaxy Test position X %d\n", galaxyTest.getX());
-  // renderWindow(window, galaxyMap);
+  renderWindow(window, galaxyMap);
 
   return 0;
 }
