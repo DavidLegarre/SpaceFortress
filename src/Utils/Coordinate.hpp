@@ -7,6 +7,6 @@ class Coordinate {
  public:
   Coordinate(int x, int y) : positionX(x), positionY(y) {}
 
-  int getX() { return positionX; }
-  int getY() { return positionY; }
+  int getPositionX() { return positionX; }
+  int getPositionY() { return positionY; }
 };

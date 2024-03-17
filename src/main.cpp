@@ -8,17 +8,18 @@
 GalaxyMap initUniverse() {
   GalaxyMap galaxyMap;
 
-  Coordinate positionTest = Coordinate(1 * 100, 2 * 100);
+  Coordinate positionTest = Coordinate(1, 2);
   Galaxy galaxyTest = Galaxy("Andromeda", positionTest, 4);
-  Coordinate positionTestChild = Coordinate(9 * 100, 4 * 100);
+  Coordinate positionTestChild = Coordinate(9, 4);
   Galaxy galaxyTestChild = Galaxy("Milky Way", positionTestChild, 45);
   galaxyTest.addChild(&galaxyTestChild);
 
-  galaxyMap.addBody(galaxyTest);
-  galaxyMap.addBody(galaxyTestChild);
+  std::printf("Galaxy %s has Position X %d\n", galaxyTest.getName().c_str(),
+              galaxyTest.getX());
 
-  galaxyMap.printMap();
-  galaxyTest.printChildren();
+  galaxyMap.addBody(galaxyTest);
+  // galaxyMap.addBody(galaxyTestChild);
+
   return galaxyMap;
 }
 
@@ -38,11 +39,14 @@ void renderWindow(sf::RenderWindow& window, GalaxyMap& galaxyMap) {
 }
 
 int main() {
-  sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
+  sf::RenderWindow window(sf::VideoMode(1920, 1080), "My window");
   GalaxyMap galaxyMap = initUniverse();
 
   window.setTitle("SpaceFortress");
-  renderWindow(window, galaxyMap);
+  Coordinate positionTest = Coordinate(1, 2);
+  Galaxy galaxyTest = Galaxy("Andromeda", positionTest, 4);
+  std::printf("Galaxy Test position X %d\n", galaxyTest.getX());
+  // renderWindow(window, galaxyMap);
 
   return 0;
 }

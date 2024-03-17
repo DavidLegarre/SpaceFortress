@@ -12,6 +12,6 @@ class AstralBody : public Node {
   AstralBody(const std::string& name, const Coordinate& coordinates);
   virtual ~AstralBody();
 
-  int getX() { return coordinates.getX(); }
-  int getY() { return coordinates.getY(); }
+  int getX() { return coordinates.getPositionX(); }
+  int getY() { return coordinates.getPositionY(); }
 };

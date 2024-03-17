@@ -54,10 +54,21 @@ void GalaxyMap::populateMap() {
 
 void GalaxyMap::renderMap(sf::RenderWindow& window) {
   // Render nodes (astral bodies)
-  for (const auto& body : Bodies) {
+  for (auto body : Bodies) {
     sf::CircleShape nodeShape(10);
     nodeShape.setFillColor(sf::Color::White);
-    nodeShape.setPosition(body->getX(), body->getY());
+
+    int xPosition = body->getX();
+    int yPosition = body->getY();
+
+    std::printf("Position x %d\n", xPosition);
+
+    xPosition *= 500;
+    yPosition *= 500;
+
+    std::printf("Position x %d\n", xPosition);
+
+    nodeShape.setPosition(xPosition, yPosition);
 
     window.draw(nodeShape);
   }

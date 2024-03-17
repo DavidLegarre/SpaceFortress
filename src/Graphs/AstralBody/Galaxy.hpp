@@ -6,7 +6,6 @@
 class Galaxy : public AstralBody {
  private:
   int numStars;
-  Coordinate coordinates;
 
  public:
   Galaxy(const std::string& name, const Coordinate& coordinates,
