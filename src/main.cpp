@@ -31,7 +31,7 @@ void renderWindow(sf::RenderWindow& window, GalaxyMap& galaxyMap) {
 }
 
 int main() {
-  sf::RenderWindow window(sf::VideoMode(400, 360), "SpaceFortress");
+  sf::RenderWindow window(sf::VideoMode(1920, 1080), "SpaceFortress");
   GalaxyMap galaxyMap = initUniverse();
 
   renderWindow(window, galaxyMap);
