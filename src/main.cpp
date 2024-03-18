@@ -11,7 +11,7 @@ GalaxyMap initUniverse() {
   Coordinate positionTest = Coordinate(1, 2);
   Galaxy* galaxyTest = new Galaxy("Andromeda", positionTest, 4);
   galaxyMap.addBody(*galaxyTest);
-  Coordinate positionTest1 = Coordinate(3+50, 7+50);
+  Coordinate positionTest1 = Coordinate(3 + 50, 7 + 50);
   Galaxy* galaxyTest1 = new Galaxy("Patata", positionTest1, 4);
   galaxyMap.addBody(*galaxyTest1);
 
@@ -19,10 +19,22 @@ GalaxyMap initUniverse() {
 }
 
 void renderWindow(sf::RenderWindow& window, GalaxyMap& galaxyMap) {
+  // Gameplay Loop
   while (window.isOpen()) {
     sf::Event event;
     while (window.pollEvent(event)) {
-      if (event.type == sf::Event::Closed) window.close();
+      switch (event.type) {
+        case sf::Event::Closed:
+          window.close();
+          break;
+        case sf::Event::KeyPressed:
+          if (event.key.code == sf::Keyboard::Escape) {
+            window.close();
+          }
+          break;
+        default:
+          break;
+      }
     }
 
     window.clear(sf::Color::Black);
@@ -34,7 +46,7 @@ void renderWindow(sf::RenderWindow& window, GalaxyMap& galaxyMap) {
 }
 
 int main() {
-  sf::RenderWindow window(sf::VideoMode(600, 400), "SpaceFortress");
+  sf::RenderWindow window(sf::VideoMode(800, 600), "SpaceFortress");
   GalaxyMap galaxyMap = initUniverse();
 
   renderWindow(window, galaxyMap);
