@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include "Graphs/AstralBody/AstralBody.hpp"
+#include "Graphs/Nodes/AstralBody/AstralBody.hpp"
 #include "Utils/Coordinate.hpp"
 
 Galaxy::Galaxy(const std::string& name, Coordinate& coordinates,

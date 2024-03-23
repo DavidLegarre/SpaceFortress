@@ -1,8 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-#include "Generators/GalaxyMap.hpp"
-#include "Graphs/AstralBody/Galaxy.hpp"
+#include "Graphs/Maps/GalaxyMap.hpp"
+#include "Graphs/Nodes/AstralBody/Galaxy.hpp"
 #include "Utils/Coordinate.hpp"
 
 GalaxyMap initUniverse() {

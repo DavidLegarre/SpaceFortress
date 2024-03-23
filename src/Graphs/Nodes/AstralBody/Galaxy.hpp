@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Graphs/AstralBody/AstralBody.hpp"
+#include "Graphs/Nodes/AstralBody/AstralBody.hpp"
 #include "Utils/Coordinate.hpp"
 
 class Galaxy : public AstralBody {

@@ -3,19 +3,14 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 
-#include "Graphs/AstralBody/AstralBody.hpp"
+#include "Graphs/Nodes/AstralBody/AstralBody.hpp"
 
 class GalaxyMap {
  private:
-  static constexpr int WIDTH = 12;
-  static constexpr int HEIGHT = 12;
-  char map[HEIGHT][WIDTH];
   std::vector<AstralBody *> Bodies;
-  void populateMap();
 
  public:
   GalaxyMap();
-  void printMap();
 
   const std::vector<AstralBody *> &getBodies() const { return Bodies; }
   void addBody(AstralBody &astralBody);
